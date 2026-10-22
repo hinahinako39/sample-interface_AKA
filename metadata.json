@@ -1,0 +1,6 @@
+{
+  "name": "4COVR Product Studio",
+  "description": "Architectural security system configurator featuring 4K active AI surveillance arrays, precision camera mixes, quantum storage, PoE network fabric, and automated BOM quote generator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

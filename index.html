@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          let _fetch = window.fetch ? window.fetch.bind(window) : undefined;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _fetch;
+            },
+            set: function(val) {
+              _fetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          try {
+            let _protoFetch = window.fetch;
+            Object.defineProperty(Object.getPrototypeOf(window), 'fetch', {
+              get: function() {
+                return _protoFetch;
+              },
+              set: function(val) {
+                _protoFetch = val;
+              },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (_) {}
+        }
+      })();
+    </script>
+    <title>4COVR Product Studio — Intelligent Security Architecture</title>
+    <meta name="description" content="Architectural security system configurator featuring 4K active AI surveillance arrays, precision camera mixes, quantum storage, PoE network fabric, and automated BOM quote generator." />
+    <meta property="og:title" content="4COVR Product Studio — Intelligent Security Architecture" />
+    <meta property="og:description" content="Architectural security system configurator featuring 4K active AI surveillance arrays, precision camera mixes, quantum storage, PoE network fabric, and automated BOM quote generator." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

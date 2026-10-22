@@ -1,0 +1,572 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>4COVR Product Studio — Step 1: System Size</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,300..700&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;border-radius:50%;background:#F5A623;cursor:pointer;box-shadow:0 0 10px rgba(245,166,35,0.6);border:2px solid #141619;}input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#F5A623;cursor:pointer;box-shadow:0 0 10px rgba(245,166,35,0.6);border:2px solid #141619;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary": "#F5A623",
+          "primary-light": "#FFB733",
+          "primary-glow": "rgba(245, 166, 35, 0.25)",
+          "accent-amber": "#F5A623",
+          "accent-gold": "#E5A93C",
+          "surface-stage": "#090A0C",
+          "surface-panel": "#111316",
+          "surface-subtle": "#17191E",
+          "surface-container-lowest": "#0D0E10",
+          "surface-container-low": "#15171B",
+          "surface-container": "#1B1E23",
+          "surface-container-high": "#23262D",
+          "surface-container-highest": "#2D313A",
+          "border-hairline": "#262931",
+          "text-primary": "#F5F5F7",
+          "text-muted": "#8E929C",
+          "text-secondary": "#C5C8D0"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2.5rem",
+          "margin": "2.5rem",
+          "margin-stage": "3.5rem"
+        },
+        "fontFamily": {
+          "headline-xl": ["Hanken Grotesk", "sans-serif"],
+          "headline-lg": ["Hanken Grotesk", "sans-serif"],
+          "headline-md": ["Hanken Grotesk", "sans-serif"],
+          "body-lg": ["Hanken Grotesk", "sans-serif"],
+          "body-md": ["Hanken Grotesk", "sans-serif"],
+          "label-numeric": ["Space Grotesk", "monospace"],
+          "label-caps": ["Space Grotesk", "sans-serif"],
+          "label-sm": ["Hanken Grotesk", "sans-serif"]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface-stage text-text-primary antialiased selection:bg-primary selection:text-surface-stage"><header class="fixed top-0 inset-x-0 z-50 bg-surface-stage/85 backdrop-blur-2xl border-b border-border-hairline shadow-[0_1px_20px_rgba(0,0,0,0.6)]"><div class="h-16 w-full px-6 lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center border border-border-hairline shadow-inner"><span class="font-headline-md font-bold tracking-tight text-primary">4C</span></div><div class="flex flex-col"><span class="font-headline-md font-extrabold text-text-primary tracking-tight leading-none text-[19px]">4COVR</span><span class="font-label-caps text-[10px] text-primary tracking-[0.2em] uppercase mt-0.5">Intelligent Security Architecture</span></div></div></div><nav class="hidden xl:flex items-center gap-8 h-full" data-active-classes="text-text-primary border-b-2 border-primary font-medium"><a aria-current="page" class="h-full inline-flex items-center font-body-md text-sm text-text-primary border-b-2 border-primary font-medium transition-colors gap-2" href="#"><span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center font-label-numeric font-semibold">1</span><span>System Size</span></a><a class="h-full inline-flex items-center font-body-md text-sm text-text-muted hover:text-text-primary transition-colors border-b-2 border-transparent gap-2" href="#"><span class="w-5 h-5 rounded-full bg-surface-container-high text-text-muted text-xs flex items-center justify-center font-label-numeric">2</span><span>Camera Models</span></a><a class="h-full inline-flex items-center font-body-md text-sm text-text-muted hover:text-text-primary transition-colors border-b-2 border-transparent gap-2" href="#"><span class="w-5 h-5 rounded-full bg-surface-container-high text-text-muted text-xs flex items-center justify-center font-label-numeric">3</span><span>Optics &amp; Coverage</span></a><a class="h-full inline-flex items-center font-body-md text-sm text-text-muted hover:text-text-primary transition-colors border-b-2 border-transparent gap-2" href="#"><span class="w-5 h-5 rounded-full bg-surface-container-high text-text-muted text-xs flex items-center justify-center font-label-numeric">4</span><span>Core &amp; Storage</span></a><a class="h-full inline-flex items-center font-body-md text-sm text-text-muted hover:text-text-primary transition-colors border-b-2 border-transparent gap-2" href="#"><span class="w-5 h-5 rounded-full bg-surface-container-high text-text-muted text-xs flex items-center justify-center font-label-numeric">5</span><span>Summary &amp; Quote</span></a></nav><div class="flex items-center gap-space-md flex-shrink-0"><button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-text-secondary hover:text-text-primary border border-border-hairline transition-all font-body-md text-xs flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px] text-primary">support_agent</span><span>Support / Advisor</span></button><button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-text-secondary hover:text-text-primary border border-border-hairline transition-all font-body-md text-xs flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">bookmark_border</span><span>Save Config</span></button><div class="w-8 h-8 rounded-full bg-surface-container-highest border border-border-hairline hover:border-primary/50 flex items-center justify-center cursor-pointer transition-colors shadow-sm"><span class="material-symbols-outlined text-text-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 pb-24 bg-surface-stage min-h-screen relative overflow-hidden"><div class="flex flex-col w-full">
+<div class="relative w-full min-h-[calc(100vh-9rem)] flex flex-col lg:flex-row overflow-hidden bg-surface-stage">
+<!-- Left Visual Studio Showcase (approx 66%) -->
+<div class="relative flex-1 lg:min-w-0 w-full flex flex-col justify-between p-space-md md:p-8 lg:p-10 select-none border-b lg:border-b-0 lg:border-r border-border-hairline">
+<!-- Top Metrics & Dynamic Badge -->
+<div class="flex flex-wrap items-center justify-between gap-space-md z-10">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_#F5A623]"></span>
+<span class="font-label-caps text-xs text-primary font-semibold uppercase tracking-widest" id="visual-architecture-badge">ESSENTIAL ARCHITECTURE</span>
+</div>
+<h2 class="font-headline-lg text-2xl lg:text-3xl text-text-primary font-medium mt-1 tracking-tight" id="visual-hero-title">4-Camera Active AI Surveillance Array</h2>
+</div>
+<div class="backdrop-blur-xl bg-surface-panel/80 border border-border-hairline px-space-lg py-2 rounded-full shadow-2xl flex items-center gap-space-lg">
+<div class="flex flex-col text-left">
+<span class="font-label-caps text-[10px] text-text-muted tracking-wider">NEURAL ENGINE</span>
+<span class="font-label-numeric text-base text-text-primary font-semibold" id="visual-tops">8.4 <span class="font-label-sm text-xs font-normal text-text-muted">TOPS</span></span>
+</div>
+<div class="w-px h-6 bg-border-hairline"></div>
+<div class="flex flex-col text-left">
+<span class="font-label-caps text-[10px] text-text-muted tracking-wider">NVR LINK</span>
+<span class="font-label-numeric text-base text-text-primary font-semibold" id="visual-nvr-channel">8 <span class="font-label-sm text-xs font-normal text-text-muted">CH Quantum</span></span>
+</div>
+<div class="w-px h-6 bg-border-hairline"></div>
+<div class="flex flex-col text-left">
+<span class="font-label-caps text-[10px] text-text-muted tracking-wider">TOTAL SENSORS</span>
+<span class="font-label-numeric text-base text-primary font-semibold" id="visual-cam-count">4 <span class="font-label-sm text-xs font-normal text-text-muted">Units</span></span>
+</div>
+</div>
+</div>
+<!-- Main Studio Visual Canvas -->
+<div class="relative my-auto w-full flex items-center justify-center min-h-[360px] lg:min-h-[500px]">
+<!-- Studio Ambient Backlight Glow -->
+<div class="absolute w-3/4 max-w-[700px] h-64 bg-primary/10 rounded-full blur-[110px] pointer-events-none transform -translate-y-6"></div>
+<div class="absolute bottom-2 w-4/5 max-w-[850px] h-12 bg-black/80 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Hero Product Image Container -->
+<div class="relative w-full max-w-5xl transition-all duration-500 ease-out" id="studio-viewport">
+<img alt="4COVR Intelligent Security Architecture Hardware Suite" class="w-full h-auto object-contain max-h-[540px] mx-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.9)] rounded-xl" id="hero-img-element" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH08ycGf-gyN-Nlj-hHsH7_o3zYjAnigojH195GD0xFtdnOFdsWJxBSDV0UCOWySn38jitcZovsrEEpntdqY-_Y20CLyDuYdlJDMiuO6TqN0SelTus0J9TDJaImjQKzfb3KgjcW9Mi3mQAp_wShQ6SHtCs5qFKcAguQfCRdFJdD9wRw8xhBCf-GZlrmFAzzHGgBp_emiJQ8hdZiXOMEHiiTxk-B8EkJIjP5LG-liqwAWJnBk1ocNqqzg">
+<!-- Interactive Hotspots -->
+<!-- Hotspot 1: 4K Precision Bullet -->
+<div class="absolute top-[32%] left-[24%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-7 h-7 rounded-full bg-primary/30 animate-ping"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_12px_#F5A623] flex items-center justify-center text-[9px] font-bold text-surface-stage">1</span>
+</div>
+<div class="absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-panel/95 border border-border-hairline px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-30">
+<div class="font-label-caps text-[10px] text-primary uppercase tracking-wider font-semibold">Sensor Node 01</div>
+<div class="font-body-md text-xs text-text-primary font-medium">4K Precision AI Bullet Camera</div>
+<div class="font-body-md text-[11px] text-text-muted">Sony STARVIS 2™ · F1.2 Low-Light Aperture</div>
+</div>
+</div>
+<!-- Hotspot 2: Turret Dome -->
+<div class="absolute top-[36%] left-[54%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-7 h-7 rounded-full bg-primary/25 animate-pulse"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_12px_#F5A623] flex items-center justify-center text-[9px] font-bold text-surface-stage">2</span>
+</div>
+<div class="absolute -top-14 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-panel/95 border border-border-hairline px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-30">
+<div class="font-label-caps text-[10px] text-primary uppercase tracking-wider font-semibold">Sensor Node 02</div>
+<div class="font-body-md text-xs text-text-primary font-medium">Ultra-Wide Turret Dome</div>
+<div class="font-body-md text-[11px] text-text-muted">142° Distortion-Free Peripheral Matrix</div>
+</div>
+</div>
+<!-- Hotspot 3: Quantum Core NVR Unit -->
+<div class="absolute bottom-[28%] right-[28%] group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-7 h-7 rounded-full bg-primary/25 animate-pulse"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_12px_#F5A623] flex items-center justify-center text-[9px] font-bold text-surface-stage">3</span>
+</div>
+<div class="absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-panel/95 border border-border-hairline px-3 py-2 rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-30">
+<div class="font-label-caps text-[10px] text-primary uppercase tracking-wider font-semibold">Core Processor Unit</div>
+<div class="font-body-md text-xs text-text-primary font-medium">4COVR Quantum Core NVR Unit</div>
+<div class="font-body-md text-[11px] text-text-muted">RAID 1/5 Hardware Encryption &amp; On-Premise AI</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Floating Studio Control Strip -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md z-10 pt-2">
+<!-- Bottom-Left Technical Specs Strip -->
+<div class="flex items-center gap-4 text-xs font-body-md text-text-secondary bg-surface-panel/70 border border-border-hairline px-4 py-2 rounded-full backdrop-blur-xl">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">memory</span>
+<span>AI Compute: <strong class="text-text-primary font-medium" id="spec-compute-text">8.4 TOPS Dedicated Engine</strong></span>
+</div>
+<div class="hidden md:block w-px h-3.5 bg-border-hairline"></div>
+<div class="hidden md:flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">videocam</span>
+<span>Video: <strong class="text-text-primary font-medium">4K UHD @ 30FPS HDR</strong></span>
+</div>
+<div class="hidden lg:block w-px h-3.5 bg-border-hairline"></div>
+<div class="hidden lg:flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">speed</span>
+<span>Latency: <strong class="text-text-primary font-medium">&lt;12ms Zero-Loss Uplink</strong></span>
+</div>
+</div>
+<!-- Interactive Lighting Mood Toggles -->
+<div class="flex items-center gap-1.5 backdrop-blur-xl bg-surface-panel/80 border border-border-hairline px-2 py-1.5 rounded-full shadow-xl" id="lighting-modes">
+<span class="font-label-caps text-[10px] text-text-muted px-2 uppercase tracking-wider">Lighting:</span>
+<button class="lighting-btn px-2.5 py-1 rounded-full text-xs font-medium bg-surface-container-high text-primary border border-primary/40 shadow-sm transition-all" data-light="studio" title="Studio Light" type="button">Studio Light</button>
+<button class="lighting-btn px-2.5 py-1 rounded-full text-xs font-medium text-text-muted hover:text-text-primary hover:bg-surface-container transition-all" data-light="night" title="Night Vision Infrared" type="button">IR Night Vision</button>
+<button class="lighting-btn px-2.5 py-1 rounded-full text-xs font-medium text-text-muted hover:text-text-primary hover:bg-surface-container transition-all" data-light="warm" title="Ambient Warm" type="button">Ambient Warm</button>
+</div>
+</div>
+</div>
+<!-- Right Configuration Console (approx 34%) -->
+<div class="w-full lg:w-[480px] xl:w-[500px] bg-surface-panel/95 backdrop-blur-2xl flex flex-col justify-between overflow-y-auto max-h-[calc(100vh-9rem)] shadow-2xl relative z-20">
+<div class="p-6 lg:p-7 space-y-6">
+<!-- Step 01 Header -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-xs text-primary font-semibold tracking-wider uppercase">STEP 01 / 05 — SYSTEM SIZE</span>
+<span class="font-label-sm text-xs text-text-muted">Modular Commercial Grade</span>
+</div>
+<h1 class="font-headline-lg text-2xl lg:text-3xl text-text-primary font-semibold tracking-tight">Build your security system.</h1>
+<p class="font-body-md text-sm text-text-muted leading-relaxed">Start with the right number of cameras. Make it yours.</p>
+</div>
+<!-- Four Primary Recommendation Cards -->
+<div class="space-y-3" id="edition-selector">
+<!-- Card 1: Essential (Selected default) -->
+<div class="package-card cursor-pointer rounded-xl p-4 transition-all duration-300 relative border bg-surface-container-high/90 border-primary shadow-[0_0_20px_rgba(245,166,35,0.14)]" data-cameras="4" data-id="essential" data-name="Essential" data-nvr="8-Channel 4COVR Core" data-nvr-ch="8" data-price="1480" data-tops="8.4" data-zone="Key focal points &amp; perimeter entryways">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-md text-base text-text-primary font-semibold">Essential</span>
+<span class="font-label-caps text-[11px] bg-primary/15 text-primary border border-primary/30 px-2 py-0.5 rounded font-medium">4 Cameras</span>
+<span class="font-label-caps text-[10px] bg-surface-container text-text-muted px-2 py-0.5 rounded">Starter Standard</span>
+</div>
+<p class="font-body-md text-xs text-text-secondary mt-1">Ideal for key focal points and entryways. Perfect for compact residences &amp; studio studios.</p>
+</div>
+<div class="w-5 h-5 rounded-full bg-primary text-surface-stage flex items-center justify-center mt-1 shrink-0 selection-dot">
+<span class="material-symbols-outlined text-[15px] font-bold">check</span>
+</div>
+</div>
+<!-- Hardware Pairing Strip -->
+<div class="mt-3 pt-2.5 border-t border-border-hairline flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-text-muted text-xs">
+<span class="material-symbols-outlined text-primary text-[15px]">dns</span>
+<span>Core: <strong class="text-text-primary font-normal">8-Channel 4COVR Core NVR</strong></span>
+</div>
+<div class="text-right">
+<span class="font-label-numeric text-base text-primary font-semibold">$1,480</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Everyday (Most Popular) -->
+<div class="package-card cursor-pointer rounded-xl p-4 transition-all duration-300 relative border border-border-hairline bg-surface-container-low hover:bg-surface-container hover:border-surface-container-highest" data-cameras="8" data-id="everyday" data-name="Everyday" data-nvr="8-Channel 4COVR Core" data-nvr-ch="8" data-price="2690" data-tops="12.0" data-zone="Comprehensive perimeter &amp; critical corridors">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-md text-base text-text-primary font-semibold">Everyday</span>
+<span class="font-label-caps text-[11px] bg-primary/15 text-primary border border-primary/30 px-2 py-0.5 rounded font-medium">8 Cameras</span>
+<span class="font-label-caps text-[10px] bg-primary text-surface-stage font-bold px-2 py-0.5 rounded">Most Popular</span>
+</div>
+<p class="font-body-md text-xs text-text-secondary mt-1">Comprehensive perimeter and critical point coverage for standard homes &amp; boutique stores.</p>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest text-text-muted flex items-center justify-center mt-1 shrink-0 selection-dot">
+<span class="material-symbols-outlined text-[15px] opacity-0">check</span>
+</div>
+</div>
+<!-- Hardware Pairing Strip -->
+<div class="mt-3 pt-2.5 border-t border-border-hairline flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-text-muted text-xs">
+<span class="material-symbols-outlined text-primary text-[15px]">dns</span>
+<span>Core: <strong class="text-text-primary font-normal">8-Channel 4COVR Core NVR</strong></span>
+</div>
+<div class="text-right">
+<span class="font-label-numeric text-base text-text-primary font-semibold">$2,690</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Expanded -->
+<div class="package-card cursor-pointer rounded-xl p-4 transition-all duration-300 relative border border-border-hairline bg-surface-container-low hover:bg-surface-container hover:border-surface-container-highest" data-cameras="16" data-id="expanded" data-name="Expanded" data-nvr="32-Channel 4COVR Enterprise Core" data-nvr-ch="32" data-price="4980" data-tops="24.0" data-zone="Multi-zone estates &amp; enterprise offices">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-md text-base text-text-primary font-semibold">Expanded</span>
+<span class="font-label-caps text-[11px] bg-primary/15 text-primary border border-primary/30 px-2 py-0.5 rounded font-medium">16 Cameras</span>
+<span class="font-label-caps text-[10px] bg-surface-container text-text-muted px-2 py-0.5 rounded">Commercial Ready</span>
+</div>
+<p class="font-body-md text-xs text-text-secondary mt-1">Multi-zone multi-building continuous observation for large estates &amp; enterprise offices.</p>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest text-text-muted flex items-center justify-center mt-1 shrink-0 selection-dot">
+<span class="material-symbols-outlined text-[15px] opacity-0">check</span>
+</div>
+</div>
+<!-- Hardware Pairing Strip -->
+<div class="mt-3 pt-2.5 border-t border-border-hairline flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-text-muted text-xs">
+<span class="material-symbols-outlined text-primary text-[15px]">dns</span>
+<span>Core: <strong class="text-text-primary font-normal">32-Channel Enterprise Core</strong></span>
+</div>
+<div class="text-right">
+<span class="font-label-numeric text-base text-text-primary font-semibold">$4,980</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Advanced -->
+<div class="package-card cursor-pointer rounded-xl p-4 transition-all duration-300 relative border border-border-hairline bg-surface-container-low hover:bg-surface-container hover:border-surface-container-highest" data-cameras="32" data-id="advanced" data-name="Advanced" data-nvr="64-Channel 4COVR Ultra Core" data-nvr-ch="64" data-price="9200" data-tops="48.0" data-zone="Mission-critical density &amp; campuses">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-md text-base text-text-primary font-semibold">Advanced</span>
+<span class="font-label-caps text-[11px] bg-primary/15 text-primary border border-primary/30 px-2 py-0.5 rounded font-medium">32 Cameras</span>
+<span class="font-label-caps text-[10px] bg-surface-container text-text-muted px-2 py-0.5 rounded">Enterprise Flagship</span>
+</div>
+<p class="font-body-md text-xs text-text-secondary mt-1">Extensive camera density with mission-critical redundancy &amp; high bandwidth archiving.</p>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest text-text-muted flex items-center justify-center mt-1 shrink-0 selection-dot">
+<span class="material-symbols-outlined text-[15px] opacity-0">check</span>
+</div>
+</div>
+<!-- Hardware Pairing Strip -->
+<div class="mt-3 pt-2.5 border-t border-border-hairline flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-text-muted text-xs">
+<span class="material-symbols-outlined text-primary text-[15px]">dns</span>
+<span>Core: <strong class="text-text-primary font-normal">64-Channel Ultra Core</strong></span>
+</div>
+<div class="text-right">
+<span class="font-label-numeric text-base text-text-primary font-semibold">$9,200</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Custom System Scaler / Expandable Slider -->
+<div class="rounded-xl border border-border-hairline bg-surface-container-low/80 p-4 space-y-3">
+<div class="flex items-center justify-between cursor-pointer select-none" id="toggle-custom-btn">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+<span class="font-headline-md text-sm text-text-primary font-medium">Need a specific deployment scale?</span>
+</div>
+<span class="font-label-caps text-xs text-primary flex items-center gap-1 font-semibold hover:underline">
+  Customize Quantity
+  <span class="material-symbols-outlined text-[16px] transition-transform duration-200" id="custom-chevron">expand_more</span>
+</span>
+</div>
+<div class="space-y-4 pt-2 border-t border-border-hairline hidden" id="custom-slider-container">
+<!-- Quick Count Pills -->
+<div class="flex items-center justify-between gap-1.5">
+<span class="font-label-caps text-[10px] text-text-muted uppercase">Quick Select:</span>
+<div class="flex items-center gap-1">
+<button class="quick-pill px-2.5 py-1 text-xs rounded-md bg-surface-container hover:bg-surface-container-high text-text-secondary border border-border-hairline" data-cam="6" type="button">6</button>
+<button class="quick-pill px-2.5 py-1 text-xs rounded-md bg-surface-container hover:bg-surface-container-high text-text-secondary border border-border-hairline" data-cam="12" type="button">12</button>
+<button class="quick-pill px-2.5 py-1 text-xs rounded-md bg-surface-container hover:bg-surface-container-high text-text-secondary border border-border-hairline" data-cam="24" type="button">24</button>
+<button class="quick-pill px-2.5 py-1 text-xs rounded-md bg-surface-container hover:bg-surface-container-high text-text-secondary border border-border-hairline" data-cam="48" type="button">48</button>
+<button class="quick-pill px-2.5 py-1 text-xs rounded-md bg-surface-container hover:bg-surface-container-high text-text-secondary border border-border-hairline" data-cam="64" type="button">64</button>
+</div>
+</div>
+<!-- Range Slider with Counter -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-xs text-text-secondary">Precision Scale:</span>
+<span class="font-label-numeric text-base text-primary font-bold" id="custom-cam-counter">4 Cameras</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="camera-range" max="64" min="1" step="1" type="range" value="4">
+<div class="flex justify-between text-[10px] text-text-muted font-label-numeric">
+<span>1 Unit</span>
+<span>16 Units</span>
+<span>32 Units</span>
+<span>48 Units</span>
+<span>64 Max</span>
+</div>
+</div>
+<!-- NVR Auto-Matching Logic Box -->
+<div class="p-3 rounded-lg bg-surface-panel border border-border-hairline flex items-center justify-between text-xs">
+<div>
+<div class="text-text-muted text-[11px]">Recommended NVR Channel:</div>
+<div class="text-text-primary font-medium" id="custom-nvr-pill">8-Channel 4COVR Core</div>
+</div>
+<div class="text-right">
+<div class="text-text-muted text-[11px]">Calculated Cost:</div>
+<div class="text-primary font-label-numeric text-sm font-semibold" id="custom-price-display">$1,480</div>
+</div>
+</div>
+<p class="text-[11px] text-text-muted leading-tight">Channels represent NVR decoding ports. Recommended hardware provides buffer for seamless future sensor expansion.</p>
+</div>
+</div>
+</div>
+<!-- Action Footer within Console -->
+<div class="sticky bottom-0 p-5 bg-surface-panel/95 backdrop-blur-2xl border-t border-border-hairline shadow-2xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-text-muted uppercase tracking-wider">Configured System</span>
+<span class="font-body-md text-xs text-text-primary font-medium" id="selected-summary-label">Essential · 4 Cameras · 8-CH NVR</span>
+</div>
+<button class="group px-6 py-2.5 rounded-full bg-primary text-surface-stage font-body-md text-xs font-bold tracking-wide flex items-center gap-2 hover:bg-primary-light transition-all duration-300 shadow-[0_0_20px_rgba(245,166,35,0.35)]" type="button">
+<span>Next: Camera Models</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Persistent Sticky Bar -->
+<footer class="fixed bottom-0 inset-x-0 z-50 bg-surface-stage/95 backdrop-blur-2xl border-t border-border-hairline shadow-[0_-4px_30px_rgba(0,0,0,0.8)]"><div class="h-20 w-full px-6 lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-6"><div class="flex flex-col"><div class="flex items-baseline gap-2"><span class="font-label-caps text-[10px] text-text-muted uppercase">Estimated System Total</span><span class="font-label-numeric text-xl lg:text-2xl text-text-primary font-bold" id="bottom-price-tag">$1,480</span><span class="font-label-caps text-[10px] text-primary/90 bg-primary/10 border border-primary/20 px-2 py-0.5 rounded ml-1">Hardware + Lifetime OS</span></div><div class="flex items-center gap-2 mt-0.5"><span class="font-label-caps text-[10px] text-primary font-medium tracking-wide">4COVR Pro Lease Option</span><span class="font-body-md text-xs text-text-muted" id="bottom-lease-tag">Or complete system from $49/mo</span></div></div><div class="h-8 w-px bg-border-hairline hidden md:block"></div><div class="hidden lg:flex items-center gap-space-md"><div class="px-4 py-1.5 rounded-lg bg-surface-container text-text-secondary font-label-caps text-xs tracking-wider flex items-center gap-2 border border-border-hairline"><span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span><span id="bottom-spec-pill">4× 4K AI Cameras | 8-CH Quantum NVR | 4TB Enterprise Storage</span></div></div></div><div class="flex items-center gap-3"><button class="hidden sm:flex px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high border border-border-hairline text-text-primary font-body-md text-xs transition-all font-medium" type="button">Schedule Expert Consultation</button><button class="px-6 py-2.5 rounded-full bg-primary hover:bg-primary-light text-surface-stage transition-all font-body-md text-xs font-bold tracking-wide shadow-[0_0_18px_rgba(245,166,35,0.35)] flex items-center gap-1.5" type="button"><span>Next: Camera Models</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></button></div></div></footer>
+<script>
+  (function init4COVRConfigurator() {
+    const cards = document.querySelectorAll('.package-card');
+    const bottomPriceTag = document.getElementById('bottom-price-tag');
+    const bottomLeaseTag = document.getElementById('bottom-lease-tag');
+    const bottomSpecPill = document.getElementById('bottom-spec-pill');
+    const selectedSummaryLabel = document.getElementById('selected-summary-label');
+    
+    // Visual indicators
+    const visualArchBadge = document.getElementById('visual-architecture-badge');
+    const visualHeroTitle = document.getElementById('visual-hero-title');
+    const visualTops = document.getElementById('visual-tops');
+    const visualNvr = document.getElementById('visual-nvr-channel');
+    const visualCamCount = document.getElementById('visual-cam-count');
+    const specComputeText = document.getElementById('spec-compute-text');
+    const heroImg = document.getElementById('hero-img-element');
+
+    // Custom slider elements
+    const toggleCustomBtn = document.getElementById('toggle-custom-btn');
+    const customSliderContainer = document.getElementById('custom-slider-container');
+    const customChevron = document.getElementById('custom-chevron');
+    const cameraRange = document.getElementById('camera-range');
+    const customCamCounter = document.getElementById('custom-cam-counter');
+    const customNvrPill = document.getElementById('custom-nvr-pill');
+    const customPriceDisplay = document.getElementById('custom-price-display');
+    const quickPills = document.querySelectorAll('.quick-pill');
+
+    let currentSystem = {
+      name: 'Essential',
+      cameras: 4,
+      nvr: '8-Channel 4COVR Core',
+      nvrCh: '8',
+      price: 1480,
+      tops: 8.4,
+      storage: '4TB Enterprise Storage'
+    };
+
+    function updateUI() {
+      // Formatted price
+      const formattedPrice = '$' + Number(currentSystem.price).toLocaleString();
+      const leaseMonthly = Math.round(currentSystem.price / 30);
+
+      if (bottomPriceTag) bottomPriceTag.textContent = formattedPrice;
+      if (bottomLeaseTag) bottomLeaseTag.textContent = `Or complete system from $${leaseMonthly}/mo`;
+      if (bottomSpecPill) bottomSpecPill.textContent = `${currentSystem.cameras}× 4K AI Cameras | ${currentSystem.nvrCh}-CH Quantum NVR | ${currentSystem.storage}`;
+      if (selectedSummaryLabel) selectedSummaryLabel.textContent = `${currentSystem.name} · ${currentSystem.cameras} Cameras · ${currentSystem.nvrCh}-CH NVR`;
+
+      if (visualArchBadge) visualArchBadge.textContent = `${currentSystem.name.toUpperCase()} ARCHITECTURE`;
+      if (visualHeroTitle) visualHeroTitle.textContent = `${currentSystem.cameras}-Camera Active AI Surveillance Array`;
+      if (visualTops) visualTops.innerHTML = `${currentSystem.tops} <span class="font-label-sm text-xs font-normal text-text-muted">TOPS</span>`;
+      if (visualNvr) visualNvr.innerHTML = `${currentSystem.nvrCh} <span class="font-label-sm text-xs font-normal text-text-muted">CH Quantum</span>`;
+      if (visualCamCount) visualCamCount.innerHTML = `${currentSystem.cameras} <span class="font-label-sm text-xs font-normal text-text-muted">Units</span>`;
+      if (specComputeText) specComputeText.textContent = `${currentSystem.tops} TOPS Dedicated Engine`;
+    }
+
+    function calculateCustom(camCount) {
+      let nvrChannels = 8;
+      let nvrName = '8-Channel 4COVR Core';
+      let nvrBase = 490;
+      let storage = '4TB Enterprise Storage';
+      let tops = 8.4;
+
+      if (camCount > 32) {
+        nvrChannels = 64;
+        nvrName = '64-Channel 4COVR Ultra Core';
+        nvrBase = 1800;
+        storage = '32TB Hot-Swap Redundant Array';
+        tops = 48.0;
+      } else if (camCount > 16) {
+        nvrChannels = 32;
+        nvrName = '32-Channel 4COVR Enterprise Core';
+        nvrBase = 1100;
+        storage = '16TB RAID Enterprise Storage';
+        tops = 24.0;
+      } else if (camCount > 8) {
+        nvrChannels = 16;
+        nvrName = '16-Channel 4COVR Pro Core';
+        nvrBase = 750;
+        storage = '8TB Surveillance Storage';
+        tops = 16.0;
+      } else {
+        nvrChannels = 8;
+        nvrName = '8-Channel 4COVR Core';
+        nvrBase = 490;
+        storage = '4TB Enterprise Storage';
+        tops = 8.4;
+      }
+
+      // Camera cost approx $245 ea
+      const price = nvrBase + (camCount * 247);
+
+      return {
+        name: `Custom (${camCount} Cam)`,
+        cameras: camCount,
+        nvr: nvrName,
+        nvrCh: nvrChannels,
+        price: price,
+        tops: tops,
+        storage: storage
+      };
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => {
+          c.classList.remove('bg-surface-container-high/90', 'border-primary', 'shadow-[0_0_20px_rgba(245,166,35,0.14)]');
+          c.classList.add('bg-surface-container-low', 'border-border-hairline');
+          const dot = c.querySelector('.selection-dot');
+          if (dot) {
+            dot.className = 'w-5 h-5 rounded-full bg-surface-container-highest text-text-muted flex items-center justify-center mt-1 shrink-0 selection-dot';
+            const chk = dot.querySelector('.material-symbols-outlined');
+            if (chk) chk.classList.add('opacity-0');
+          }
+          const priceSpan = c.querySelector('.font-label-numeric');
+          if (priceSpan) {
+            priceSpan.classList.remove('text-primary');
+            priceSpan.classList.add('text-text-primary');
+          }
+        });
+
+        card.classList.remove('bg-surface-container-low', 'border-border-hairline');
+        card.classList.add('bg-surface-container-high/90', 'border-primary', 'shadow-[0_0_20px_rgba(245,166,35,0.14)]');
+        
+        const dot = card.querySelector('.selection-dot');
+        if (dot) {
+          dot.className = 'w-5 h-5 rounded-full bg-primary text-surface-stage flex items-center justify-center mt-1 shrink-0 selection-dot';
+          const chk = dot.querySelector('.material-symbols-outlined');
+          if (chk) chk.classList.remove('opacity-0');
+        }
+
+        const priceSpan = card.querySelector('.font-label-numeric');
+        if (priceSpan) {
+          priceSpan.classList.add('text-primary');
+          priceSpan.classList.remove('text-text-primary');
+        }
+
+        currentSystem = {
+          name: card.dataset.name,
+          cameras: parseInt(card.dataset.cameras, 10),
+          nvr: card.dataset.nvr,
+          nvrCh: card.dataset.nvrCh,
+          price: parseInt(card.dataset.price, 10),
+          tops: parseFloat(card.dataset.tops),
+          storage: card.dataset.cameras >= 32 ? '32TB Hot-Swap Redundant' : (card.dataset.cameras >= 16 ? '16TB RAID Storage' : '4TB Enterprise Storage')
+        };
+
+        if (cameraRange) {
+          cameraRange.value = currentSystem.cameras;
+          if (customCamCounter) customCamCounter.textContent = `${currentSystem.cameras} Cameras`;
+        }
+
+        updateUI();
+      });
+    });
+
+    // Custom slider expand/collapse
+    if (toggleCustomBtn && customSliderContainer) {
+      toggleCustomBtn.addEventListener('click', () => {
+        const isHidden = customSliderContainer.classList.contains('hidden');
+        if (isHidden) {
+          customSliderContainer.classList.remove('hidden');
+          customChevron.classList.add('rotate-180');
+        } else {
+          customSliderContainer.classList.add('hidden');
+          customChevron.classList.remove('rotate-180');
+        }
+      });
+    }
+
+    function applySliderVal(val) {
+      const parsed = parseInt(val, 10);
+      const computed = calculateCustom(parsed);
+      
+      if (customCamCounter) customCamCounter.textContent = `${parsed} Cameras`;
+      if (customNvrPill) customNvrPill.textContent = computed.nvr;
+      if (customPriceDisplay) customPriceDisplay.textContent = '$' + computed.price.toLocaleString();
+
+      currentSystem = computed;
+      
+      // Deselect preset cards
+      cards.forEach(c => {
+        c.classList.remove('bg-surface-container-high/90', 'border-primary', 'shadow-[0_0_20px_rgba(245,166,35,0.14)]');
+        c.classList.add('bg-surface-container-low', 'border-border-hairline');
+        const dot = c.querySelector('.selection-dot');
+        if (dot) {
+          dot.className = 'w-5 h-5 rounded-full bg-surface-container-highest text-text-muted flex items-center justify-center mt-1 shrink-0 selection-dot';
+          const chk = dot.querySelector('.material-symbols-outlined');
+          if (chk) chk.classList.add('opacity-0');
+        }
+      });
+
+      updateUI();
+    }
+
+    if (cameraRange) {
+      cameraRange.addEventListener('input', (e) => {
+        applySliderVal(e.target.value);
+      });
+    }
+
+    quickPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const val = pill.dataset.cam;
+        if (cameraRange) cameraRange.value = val;
+        applySliderVal(val);
+      });
+    });
+
+    // Studio Lighting Toggles
+    const lightingBtns = document.querySelectorAll('.lighting-btn');
+    lightingBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        lightingBtns.forEach(b => {
+          b.className = 'lighting-btn px-2.5 py-1 rounded-full text-xs font-medium text-text-muted hover:text-text-primary hover:bg-surface-container transition-all';
+        });
+        btn.className = 'lighting-btn px-2.5 py-1 rounded-full text-xs font-medium bg-surface-container-high text-primary border border-primary/40 shadow-sm transition-all';
+
+        const mode = btn.dataset.light;
+        if (heroImg) {
+          if (mode === 'night') {
+            heroImg.style.filter = 'brightness(0.85) contrast(1.15) hue-rotate(170deg) saturate(0.6)';
+          } else if (mode === 'warm') {
+            heroImg.style.filter = 'brightness(1.05) contrast(1.05) sepia(0.22) saturate(1.2)';
+          } else {
+            heroImg.style.filter = 'none';
+          }
+        }
+      });
+    });
+
+    updateUI();
+  })();
+</script></body></html>

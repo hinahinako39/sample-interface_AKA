@@ -1,0 +1,1189 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>4COVR Product Studio - 5. Review &amp; Quote</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,300..700&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #121314; }
+    ::-webkit-scrollbar-thumb { background: #262a30; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #39393a; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#121314",
+            "surface-dim": "#121314",
+            "surface-bright": "#39393a",
+            "surface-container-lowest": "#0d0e0f",
+            "surface-container-low": "#181a1d",
+            "surface-container": "#1f2226",
+            "surface-container-high": "#282c32",
+            "surface-container-highest": "#33373e",
+            "surface-panel": "#141619",
+            "surface-stage": "#0b0c0d",
+            "border-hairline": "#262A30",
+            "brand-gold": "#F5A623",
+            "brand-gold-glow": "rgba(245, 166, 35, 0.22)",
+            "brand-gold-dim": "#b57917",
+            "text-primary": "#F5F5F5",
+            "text-muted": "#8A9099",
+            "outline-border": "#2c3138"
+          },
+          fontFamily: {
+            "sans": ["Hanken Grotesk", "sans-serif"],
+            "mono": ["Space Grotesk", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface-stage text-text-primary antialiased selection:bg-brand-gold selection:text-surface-stage font-sans">
+<!-- TOP HEADER -->
+<header class="fixed top-0 inset-x-0 z-50 bg-[#121314]/90 backdrop-blur-2xl border-b border-border-hairline shadow-[0_2px_24px_rgba(0,0,0,0.65)]">
+<div class="h-16 w-full px-6 lg:px-12 flex items-center justify-between gap-6">
+<!-- Brand Logo & Studio Subtitle -->
+<div class="flex items-center gap-4 flex-shrink-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high border border-brand-gold/40 flex items-center justify-center shadow-[0_0_12px_rgba(245,166,35,0.2)]">
+<span class="font-mono text-[14px] font-bold text-brand-gold tracking-tight">4C</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-sans font-semibold tracking-wide text-text-primary text-[14px]">4COVR PRODUCT STUDIO</span>
+<span class="px-1.5 py-0.2 bg-brand-gold/15 text-brand-gold font-mono text-[10px] rounded tracking-wider uppercase">Pro V4</span>
+</div>
+<span class="font-mono text-[10px] text-text-muted tracking-widest uppercase">INTELLIGENT SECURITY ARCHITECTURE</span>
+</div>
+</div>
+<!-- 5-Step Configurator Navigation -->
+<nav class="hidden xl:flex items-center gap-1 lg:gap-2 h-full text-[13px] font-sans">
+<a class="h-full inline-flex items-center gap-1.5 px-3 text-text-muted hover:text-text-primary border-b-2 border-transparent transition-colors group" href="#">
+<span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>1. System Size</span>
+</a>
+<a class="h-full inline-flex items-center gap-1.5 px-3 text-text-muted hover:text-text-primary border-b-2 border-transparent transition-colors group" href="#">
+<span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>2. Camera Models</span>
+</a>
+<a class="h-full inline-flex items-center gap-1.5 px-3 text-text-muted hover:text-text-primary border-b-2 border-transparent transition-colors group" href="#">
+<span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>3. NVR &amp; Storage</span>
+</a>
+<a class="h-full inline-flex items-center gap-1.5 px-3 text-text-muted hover:text-text-primary border-b-2 border-transparent transition-colors group" href="#">
+<span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
+<span>4. PoE &amp; Network</span>
+</a>
+<a aria-current="page" class="h-full inline-flex items-center gap-2 px-3 text-text-primary border-b-2 border-brand-gold font-medium bg-brand-gold/5 transition-all" href="#">
+<span class="w-4 h-4 rounded-full bg-brand-gold text-surface-stage flex items-center justify-center text-[10px] font-bold shadow-[0_0_8px_rgba(245,166,35,0.6)]">5</span>
+<span class="text-brand-gold font-medium">5. Review &amp; Quote</span>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse ml-0.5"></span>
+</a>
+</nav>
+<!-- Top Right Action Cluster -->
+<div class="flex items-center gap-3 flex-shrink-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high border border-border-hairline text-text-muted hover:text-text-primary text-[12px] flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-brand-gold">headset_mic</span>
+<span>Support / Advisor</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high border border-border-hairline text-text-muted hover:text-text-primary text-[12px] flex items-center gap-1.5 transition-colors" id="btn-save-config-top" type="button">
+<span class="material-symbols-outlined text-[15px]">bookmark_border</span>
+<span>Save Config</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-brand-gold/50 flex items-center justify-center cursor-pointer hover:border-brand-gold transition-colors shadow-[0_0_10px_rgba(245,166,35,0.15)]">
+<span class="material-symbols-outlined text-text-primary text-[17px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN VIEWPORT -->
+<main class="w-full pt-20 pb-32 bg-surface-stage min-h-screen">
+<div class="w-full max-w-[1720px] mx-auto px-6 lg:px-12 py-6">
+<!-- STEP HEADER: SENSE OF COMPLETION -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-6 border-b border-border-hairline/80">
+<div class="flex flex-col gap-2">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="px-2.5 py-1 rounded bg-brand-gold/10 border border-brand-gold/30 text-brand-gold font-mono text-[11px] font-semibold tracking-wider uppercase flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-ping"></span>
+              STEP 05 / 05 — REVIEW &amp; QUOTE | ARCHITECTURAL SYSTEM SUMMARY
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-sans text-[11px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              Your system is ready
+            </span>
+<span class="font-mono text-[11px] text-text-muted">CONFIG ID: 4C-2025-ARCH8-X9</span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-light text-text-primary tracking-tight mt-1">
+            Your system. <span class="text-brand-gold font-normal">Your way.</span>
+</h1>
+<p class="text-text-muted text-[14px] max-w-3xl leading-relaxed">
+            Every detail, thoughtfully put together. Review your customized security array, intelligent compute core, network fabric, and auto-provisioned installation accessories.
+          </p>
+</div>
+<!-- Header Actions -->
+<div class="flex items-center gap-2.5 flex-wrap flex-shrink-0">
+<button class="px-3.5 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high border border-border-hairline text-text-primary text-[13px] flex items-center gap-2 transition-colors" id="btn-export-csv" type="button">
+<span class="material-symbols-outlined text-[16px] text-text-muted">file_download</span>
+<span>Export BOM (CSV)</span>
+</button>
+<button class="px-5 py-2 rounded-xl bg-gradient-to-r from-brand-gold to-[#e09115] hover:brightness-110 text-surface-stage font-semibold text-[13px] flex items-center gap-2 shadow-[0_0_20px_rgba(245,166,35,0.35)] transition-all" id="btn-header-quote" type="button">
+<span class="material-symbols-outlined text-[17px]">request_quote</span>
+<span>Generate My Quote</span>
+</button>
+</div>
+</div>
+<!-- MAIN 2-COLUMN WORKSPACE -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: STUDIO PRODUCT HERO DISPLAY (58% / col-span-7) -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<!-- Main Interactive Viewport Container -->
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-panel border border-border-hairline shadow-[0_8px_32px_rgba(0,0,0,0.6)] flex flex-col">
+<!-- Perspective Toggles Bar -->
+<div class="px-5 py-3 bg-surface-container-lowest/90 border-b border-border-hairline flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-mono text-[11px] uppercase tracking-wider text-text-muted">View Perspective:</span>
+<div class="inline-flex p-1 rounded-lg bg-surface-stage border border-border-hairline gap-1">
+<button class="px-3 py-1 text-[12px] rounded font-medium transition-all bg-surface-container-high text-brand-gold shadow-sm flex items-center gap-1.5" id="tab-view-complete" type="button">
+<span class="material-symbols-outlined text-[14px]">token</span>
+<span>Complete System</span>
+</button>
+<button class="px-3 py-1 text-[12px] rounded font-medium transition-all text-text-muted hover:text-text-primary flex items-center gap-1.5" id="tab-view-cameras" type="button">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>Camera Collection</span>
+</button>
+<button class="px-3 py-1 text-[12px] rounded font-medium transition-all text-text-muted hover:text-text-primary flex items-center gap-1.5" id="tab-view-network" type="button">
+<span class="material-symbols-outlined text-[14px]">dns</span>
+<span>Recording &amp; Network</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-mono text-[11px] text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  Verified Compatible
+                </span>
+</div>
+</div>
+<!-- Product Canvas & Hotspots -->
+<div class="relative w-full aspect-[16/9] bg-gradient-to-b from-[#0e0f11] via-[#14161a] to-[#0a0b0c] flex items-center justify-center overflow-hidden group">
+<img alt="4COVR Complete Architecture Ecosystem" class="w-full h-full object-cover transition-opacity duration-500 ease-out" id="hero-display-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkN9DyCIf-q7-BHM9k-Q9l80mlCXadUARrDOEm_XiH4jOfZvrunePqv1VKIYHBcDq3r_QKZtdpOnJuI6VkrV0jDKAdniToRlCl3m0fDGba9U4QTlx9EKe3CRz8L7po3URpFsfkkTSii71l4CgMwDSui25LOQpJ_fxq1HYc4VgL9mVvKvF4dbh4wZZhWcG3zFKLJSVTJPtocDXqtNv3IA9cfV49dA0yT-D_NQdvOdb0EqPMHUC1ss9Rrw">
+<!-- Ambient overlay gradient for depth -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-stage/80 via-transparent to-surface-stage/20 pointer-events-none"></div>
+<!-- Floating Hot Tag 1: Architectural Ecosystem -->
+<div class="absolute top-5 left-5 flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-panel/85 backdrop-blur-md border border-border-hairline shadow-xl" id="hottag-eco">
+<span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+<span class="font-mono text-[11px] text-text-primary tracking-wider uppercase font-semibold">4COVR Architectural Ecosystem</span>
+</div>
+<!-- Floating Hot Tag 2: Compute Core (Positioned over NVR) -->
+<div class="absolute bottom-16 right-8 hidden sm:flex items-center gap-2 px-3 py-1 rounded-lg bg-surface-stage/90 backdrop-blur-md border border-brand-gold/40 text-[11px] text-text-primary shadow-2xl" id="hottag-nvr">
+<span class="material-symbols-outlined text-brand-gold text-[14px]">memory</span>
+<span>8-Channel Quantum Core &amp; 4TB HDD</span>
+</div>
+<!-- Floating Hot Tag 3: AI Sensors (Positioned over Camera Array) -->
+<div class="absolute top-1/3 left-8 hidden sm:flex items-center gap-2 px-3 py-1 rounded-lg bg-surface-stage/90 backdrop-blur-md border border-border-hairline text-[11px] text-text-primary shadow-2xl" id="hottag-sensors">
+<span class="material-symbols-outlined text-emerald-400 text-[14px]">sensors</span>
+<span>8× AI Sensor Mix · 4K Precision Glass</span>
+</div>
+<!-- Canvas Controls (Zoom/Full/Reset) -->
+<div class="absolute bottom-4 left-5 flex items-center gap-1.5 bg-surface-stage/80 backdrop-blur-md border border-border-hairline px-2 py-1.5 rounded-xl">
+<button class="p-1 rounded text-text-muted hover:text-text-primary hover:bg-surface-container transition-colors" title="Zoom In" type="button">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+</button>
+<button class="p-1 rounded text-text-muted hover:text-text-primary hover:bg-surface-container transition-colors" title="Zoom Out" type="button">
+<span class="material-symbols-outlined text-[16px]">zoom_out</span>
+</button>
+<div class="w-px h-3.5 bg-border-hairline mx-0.5"></div>
+<button class="p-1 rounded text-text-muted hover:text-text-primary hover:bg-surface-container transition-colors" id="btn-fullscreen-toggle" title="Full Studio View" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_full</span>
+</button>
+</div>
+</div>
+<!-- Dynamic Key Telemetry Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 bg-surface-container-lowest border-t border-border-hairline divide-y md:divide-y-0 md:divide-x divide-border-hairline p-4 text-center">
+<div class="flex flex-col items-center py-1">
+<span class="font-mono text-[10px] text-text-muted tracking-widest uppercase">INTELLIGENT SENSORS</span>
+<span class="font-mono text-base font-semibold text-text-primary mt-0.5">8 Units (3 Models)</span>
+<span class="text-[11px] text-emerald-400 font-sans mt-0.5">Ultra 4K &amp; Stitched DualArc</span>
+</div>
+<div class="flex flex-col items-center py-1">
+<span class="font-mono text-[10px] text-text-muted tracking-widest uppercase">COMPUTE &amp; ARCHIVE</span>
+<span class="font-mono text-base font-semibold text-brand-gold mt-0.5">8CH NVR + 4TB</span>
+<span class="text-[11px] text-text-muted font-sans mt-0.5">Surveillance Grade 24/7</span>
+</div>
+<div class="flex flex-col items-center py-1">
+<span class="font-mono text-[10px] text-text-muted tracking-widest uppercase">POWER &amp; FABRIC</span>
+<span class="font-mono text-base font-semibold text-text-primary mt-0.5">8-Port 120W PoE</span>
+<span class="text-[11px] text-text-muted font-sans mt-0.5">&lt;1ms Wire-Speed Backplane</span>
+</div>
+<div class="flex flex-col items-center py-1">
+<span class="font-mono text-[10px] text-text-muted tracking-widest uppercase">ACCESSORIES</span>
+<span class="font-mono text-base font-semibold text-emerald-400 mt-0.5">Auto-Provisioned</span>
+<span class="text-[11px] text-text-muted font-sans mt-0.5">Cables, Boxes &amp; Mounts</span>
+</div>
+</div>
+</div>
+<!-- AUTOMATIC ACCESSORIES MODULE (Accessories, Taken Care Of) -->
+<div class="bg-surface-panel rounded-2xl p-6 border border-border-hairline shadow-xl flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-border-hairline">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-[20px]">inventory_2</span>
+<h2 class="text-[18px] font-medium text-text-primary tracking-tight">Accessories, taken care of.</h2>
+</div>
+<p class="text-[13px] text-text-muted mt-0.5">We've put together the precision hardware that completes your deployment.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high border border-border-hairline text-text-primary text-[12px] flex items-center gap-1.5 transition-colors" id="btn-toggle-accessories-list" type="button">
+<span id="label-acc-view">View Details &amp; Specs</span>
+<span class="material-symbols-outlined text-[16px]" id="icon-acc-chevron">expand_more</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-brand-gold/15 hover:bg-brand-gold/25 border border-brand-gold/40 text-brand-gold text-[12px] font-medium flex items-center gap-1.5 transition-colors" id="btn-open-adjust-drawer" type="button">
+<span class="material-symbols-outlined text-[15px]">tune</span>
+<span>Adjust Accessories</span>
+</button>
+</div>
+</div>
+<!-- Provisioned Items Card Deck -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<!-- Item 1: Mounting Brackets -->
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-border-hairline/60 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-text-muted flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">build</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[13px] font-medium text-text-primary truncate">Architectural Brackets</span>
+<span class="text-[11px] text-text-muted">8× Precision metal mounts</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Included</span>
+<span class="font-mono text-[12px] text-text-muted mt-0.5">$0</span>
+</div>
+</div>
+<!-- Item 2: Cat6 Braided Cables -->
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-border-hairline/60 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-text-muted flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">cable</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[13px] font-medium text-text-primary truncate" id="cable-label-display">Braided Cat6 Cables</span>
+<span class="text-[11px] text-text-muted" id="cable-len-display">8× 100 ft Weatherproof Black</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Included</span>
+<span class="font-mono text-[12px] text-text-muted mt-0.5">$0</span>
+</div>
+</div>
+<!-- Item 3: Outdoor Junction Boxes -->
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-border-hairline/60 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-brand-gold flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">crop_square</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[13px] font-medium text-text-primary truncate">Outdoor Junction Boxes</span>
+<span class="text-[11px] text-text-muted" id="jbox-summary-display">4× Waterproof LY-DP54 Deep Box</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-brand-gold/10 text-brand-gold border border-brand-gold/20">Auto-Added</span>
+<span class="font-mono text-[12px] text-text-primary font-medium mt-0.5" id="jbox-price-display">$76</span>
+</div>
+</div>
+<!-- Item 4: Screws & Seal Kit -->
+<div class="p-3.5 rounded-xl bg-surface-container-low border border-border-hairline/60 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-text-muted flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[13px] font-medium text-text-primary truncate">Mounting Hardware Kit</span>
+<span class="text-[11px] text-text-muted">Weather-tight gaskets &amp; fasteners</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Included</span>
+<span class="font-mono text-[12px] text-text-muted mt-0.5">$0</span>
+</div>
+</div>
+</div>
+<!-- Expandable Detailed Specifications Accordion -->
+<div class="hidden flex-col gap-2 pt-2 border-t border-border-hairline text-[12px]" id="accessories-expanded-panel">
+<div class="p-3 rounded-lg bg-surface-container-lowest/60 text-text-muted leading-relaxed font-sans flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-mono text-text-primary font-medium">BOM Auto-Allocation Logic</span>
+<span class="text-emerald-400 text-[11px]">8 PoE runs accounted for</span>
+</div>
+<p>Standard architectural package auto-matches 1× heavy-gauge outdoor-rated Cat6 cable per camera sensor. Junction boxes are provisioned for all outdoor perimeter units (4 exterior zones) to prevent exposed pigtail wiring and water ingress.</p>
+</div>
+</div>
+</div>
+<!-- COMPLETE BILL OF MATERIALS (BOM) COLLAPSIBLE SECTION -->
+<div class="bg-surface-panel rounded-2xl border border-border-hairline shadow-xl overflow-hidden">
+<button class="w-full p-5 flex items-center justify-between hover:bg-surface-container-low transition-colors text-left" id="btn-toggle-bom-table" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-brand-gold">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-[16px] font-medium text-text-primary">Complete Bill of Materials (BOM)</span>
+<span class="font-mono text-[11px] px-2 py-0.5 rounded bg-surface-container text-text-muted">8 Line Items</span>
+</div>
+<span class="text-[12px] text-text-muted">Full itemized breakdown with SKUs, technical specs, and unit rates.</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-text-muted">
+<span class="text-[12px] font-mono">Expand View</span>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-300" id="icon-bom-arrow">expand_more</span>
+</div>
+</button>
+<!-- Collapsed BOM Table Content -->
+<div class="hidden border-t border-border-hairline p-5 bg-surface-container-lowest/50" id="bom-table-content">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse text-[12px]">
+<thead>
+<tr class="border-b border-border-hairline text-text-muted font-mono uppercase text-[10px] tracking-wider">
+<th class="py-2.5 px-3">Product &amp; SKU</th>
+<th class="py-2.5 px-3">Specification</th>
+<th class="py-2.5 px-3 text-center">Qty</th>
+<th class="py-2.5 px-3 text-right">Unit Price</th>
+<th class="py-2.5 px-3 text-right">Subtotal</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-hairline/60 font-sans">
+<tr>
+<td class="py-3 px-3 font-medium text-text-primary">Armor 8MP Bullet<br><span class="text-[10px] font-mono text-text-muted">4C-CAM-B800</span></td>
+<td class="py-3 px-3 text-text-muted">4K Ultra HD · 2.8mm Lens · 50m IR · IP67 Metal</td>
+<td class="py-3 px-3 text-center font-mono">4</td>
+<td class="py-3 px-3 text-right font-mono">$89.00</td>
+<td class="py-3 px-3 text-right font-mono text-text-primary">$356.00</td>
+</tr>
+<tr>
+<td class="py-3 px-3 font-medium text-text-primary">BinSight 8MP Turret<br><span class="text-[10px] font-mono text-text-muted">4C-CAM-T800</span></td>
+<td class="py-3 px-3 text-text-muted">Smart Dual Light · Color Night · Built-in Mic</td>
+<td class="py-3 px-3 text-center font-mono">2</td>
+<td class="py-3 px-3 text-right font-mono">$149.00</td>
+<td class="py-3 px-3 text-right font-mono text-text-primary">$298.00</td>
+</tr>
+<tr>
+<td class="py-3 px-3 font-medium text-text-primary">DualArc 180° Panoramic<br><span class="text-[10px] font-mono text-text-muted">4C-CAM-P180</span></td>
+<td class="py-3 px-3 text-text-muted">Seamless Dual-Sensor · Ultra-Wide Perimeter AI</td>
+<td class="py-3 px-3 text-center font-mono">2</td>
+<td class="py-3 px-3 text-right font-mono">$229.00</td>
+<td class="py-3 px-3 text-right font-mono text-text-primary">$458.00</td>
+</tr>
+<tr>
+<td class="py-3 px-3 font-medium text-text-primary">8CH Quantum Core NVR<br><span class="text-[10px] font-mono text-text-muted">4C-NVR-08PRO</span></td>
+<td class="py-3 px-3 text-text-muted">1× SATA Bay · 80Mbps Inbound · Smart AI H.265+</td>
+<td class="py-3 px-3 text-center font-mono">1</td>
+<td class="py-3 px-3 text-right font-mono">$189.00</td>
+<td class="py-3 px-3 text-right font-mono text-text-primary">$189.00</td>
+</tr>
+<tr>
+<td class="py-3 px-3 font-medium text-text-primary">4TB Surveillance HDD<br><span class="text-[10px] font-mono text-text-muted">4C-HDD-4TB-PRO</span></td>
+<td class="py-3 px-3 text-text-muted">Enterprise Pro 24/7 CMR · 256MB Cache · 3yr SLA</td>
+<td class="py-3 px-3 text-center font-mono">1</td>
+<td class="py-3 px-3 text-right font-mono">$115.00</td>
+<td class="py-3 px-3 text-right font-mono text-text-primary">$115.00</td>
+</tr>
+<tr>
+<td class="py-3 px-3 font-medium text-text-primary">8-Port PoE Switch<br><span class="text-[10px] font-mono text-text-muted">4C-POE-08M-120</span></td>
+<td class="py-3 px-3 text-text-muted">120W Total PoE+ Budget · Gigabit Uplink · Fanless</td>
+<td class="py-3 px-3 text-center font-mono">1</td>
+<td class="py-3 px-3 text-right font-mono">$89.00</td>
+<td class="py-3 px-3 text-right font-mono text-text-primary">$89.00</td>
+</tr>
+<tr>
+<td class="py-3 px-3 font-medium text-text-primary">Braided Cat6 Cables (100ft)<br><span class="text-[10px] font-mono text-text-muted">4C-CAB-100FT</span></td>
+<td class="py-3 px-3 text-text-muted">High-Flex Shielded Weatherproof RJ-45 Pre-Term</td>
+<td class="py-3 px-3 text-center font-mono">8</td>
+<td class="py-3 px-3 text-right font-mono text-emerald-400">Included</td>
+<td class="py-3 px-3 text-right font-mono text-emerald-400">$0.00</td>
+</tr>
+<tr>
+<td class="py-3 px-3 font-medium text-text-primary">Waterproof Junction Box<br><span class="text-[10px] font-mono text-text-muted">4C-JBOX-DP54</span></td>
+<td class="py-3 px-3 text-text-muted">IP66 Aluminum Seal Enclosure with conduit knockout</td>
+<td class="py-3 px-3 text-center font-mono" id="bom-jbox-qty">4</td>
+<td class="py-3 px-3 text-right font-mono">$19.00</td>
+<td class="py-3 px-3 text-right font-mono text-text-primary" id="bom-jbox-subtotal">$76.00</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="border-t border-border-hairline text-text-primary font-medium">
+<td class="py-3 px-3 text-right font-mono uppercase text-text-muted" colspan="4">Total Hardware Value</td>
+<td class="py-3 px-3 text-right font-mono text-brand-gold font-bold text-sm" id="bom-grand-total">$1,581.00</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: CONFIGURATION SUMMARY & CHECKOUT (42% / col-span-5) -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Configuration Overview Card Group -->
+<div class="bg-surface-panel rounded-2xl p-6 border border-border-hairline shadow-2xl flex flex-col gap-5">
+<div class="flex items-center justify-between pb-3 border-b border-border-hairline">
+<div class="flex flex-col">
+<h2 class="text-lg font-medium text-text-primary">Your Configuration</h2>
+<p class="text-[12px] text-text-muted">A complete overview of your personalized security system.</p>
+</div>
+<span class="px-2.5 py-1 rounded bg-brand-gold/10 border border-brand-gold/30 text-brand-gold font-mono text-[11px] font-semibold">
+                8 CHANNELS
+              </span>
+</div>
+<!-- Card Group A: Camera System -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-border-hairline flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-[18px]">videocam</span>
+<span class="text-[14px] font-semibold text-text-primary">Camera Array</span>
+<span class="font-mono text-[11px] text-text-muted">(8 Cameras)</span>
+</div>
+<a class="text-[11px] font-mono text-brand-gold hover:underline flex items-center gap-0.5" href="#">
+<span>Edit Cameras</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</a>
+</div>
+<!-- Camera sub items -->
+<div class="flex flex-col gap-2 pt-1 font-sans text-[12px]">
+<div class="flex items-start justify-between py-1 border-b border-border-hairline/40">
+<div class="flex flex-col">
+<span class="text-text-primary font-medium">4× Armor 8MP 4K Bullet</span>
+<span class="text-text-muted text-[11px]">4K Ultra HD · Long-Range IR 50m</span>
+</div>
+<span class="font-mono text-text-primary font-medium">$356</span>
+</div>
+<div class="flex items-start justify-between py-1 border-b border-border-hairline/40">
+<div class="flex flex-col">
+<span class="text-text-primary font-medium">2× BinSight 8MP Turret</span>
+<span class="text-text-muted text-[11px]">Smart Dual Light · Color Night Vision</span>
+</div>
+<span class="font-mono text-text-primary font-medium">$298</span>
+</div>
+<div class="flex items-start justify-between py-1">
+<div class="flex flex-col">
+<span class="text-text-primary font-medium">2× DualArc 8MP 180° Panoramic</span>
+<span class="text-text-muted text-[11px]">Seamless Stitched Lens · Zero Blind Spots</span>
+</div>
+<span class="font-mono text-text-primary font-medium">$458</span>
+</div>
+</div>
+</div>
+<!-- Card Group B: Recording & Storage System -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-border-hairline flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-[18px]">hard_drive</span>
+<span class="text-[14px] font-semibold text-text-primary">Compute &amp; Storage</span>
+</div>
+<a class="text-[11px] font-mono text-brand-gold hover:underline flex items-center gap-0.5" href="#">
+<span>Edit Storage</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</a>
+</div>
+<div class="flex flex-col gap-2 pt-1 font-sans text-[12px]">
+<div class="flex items-start justify-between py-1 border-b border-border-hairline/40">
+<div class="flex flex-col">
+<span class="text-text-primary font-medium">8-Channel Quantum Core NVR</span>
+<span class="text-text-muted text-[11px]">1× SATA Bay · 80Mbps Inflow · H.265+ AI</span>
+</div>
+<span class="font-mono text-text-primary font-medium">$189</span>
+</div>
+<div class="flex items-start justify-between py-1">
+<div class="flex flex-col">
+<span class="text-text-primary font-medium">4TB Enterprise Pro HDD</span>
+<span class="text-text-muted text-[11px]">Surveillance Grade CMR · 24/7 Continuous</span>
+</div>
+<span class="font-mono text-text-primary font-medium">$115</span>
+</div>
+</div>
+<!-- Storage Spec Pill -->
+<div class="p-2.5 rounded-lg bg-surface-container border border-border-hairline/80 flex items-center gap-2 text-[11px]">
+<span class="material-symbols-outlined text-brand-gold text-[16px] flex-shrink-0">timelapse</span>
+<span class="text-text-muted">Continuous 24/7 · H.265 Smart AI · Est. Retention: <strong class="text-brand-gold font-mono font-normal">22 Days</strong> (43% Target Met)</span>
+</div>
+</div>
+<!-- Card Group C: PoE & Network Fabric -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-border-hairline flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-gold text-[18px]">lan</span>
+<span class="text-[14px] font-semibold text-text-primary">PoE &amp; Network Fabric</span>
+</div>
+<a class="text-[11px] font-mono text-brand-gold hover:underline flex items-center gap-0.5" href="#">
+<span>Edit Network</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</a>
+</div>
+<div class="flex flex-col gap-2 pt-1 font-sans text-[12px]">
+<div class="flex items-start justify-between py-1">
+<div class="flex flex-col">
+<span class="text-text-primary font-medium">8-Port Enterprise PoE Switch</span>
+<span class="text-text-muted text-[11px]">120W Total Power Envelope · 8 Active Ports</span>
+</div>
+<span class="font-mono text-text-primary font-medium">$89</span>
+</div>
+</div>
+<!-- Power Load Indicator -->
+<div class="p-2.5 rounded-lg bg-surface-container border border-border-hairline/80 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-[11px] font-mono">
+<span class="text-text-muted">Power Budget Load</span>
+<span class="text-emerald-400 font-medium">82W / 120W Budget (38W Headroom)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-stage rounded-full overflow-hidden">
+<div class="w-[68%] h-full bg-gradient-to-r from-emerald-400 to-brand-gold rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Financial Summary Breakdown Card -->
+<div class="p-5 rounded-xl bg-surface-container-lowest border border-border-hairline flex flex-col gap-2.5">
+<span class="font-mono text-[11px] uppercase tracking-wider text-text-muted">Investment Breakdown</span>
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-text-muted">Camera System Subtotal</span>
+<span class="font-mono text-text-primary">$1,112.00</span>
+</div>
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-text-muted">NVR &amp; Storage Subtotal</span>
+<span class="font-mono text-text-primary">$304.00</span>
+</div>
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-text-muted">PoE &amp; Network Equipment</span>
+<span class="font-mono text-text-primary">$89.00</span>
+</div>
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-text-muted">Auto-Configured Accessories</span>
+<span class="font-mono text-text-primary" id="side-acc-subtotal">$76.00</span>
+</div>
+<div class="pt-3 mt-1 border-t border-border-hairline flex items-baseline justify-between">
+<div class="flex flex-col">
+<span class="text-base font-semibold text-text-primary">Hardware System Total</span>
+<span class="text-[11px] text-emerald-400 font-sans">Includes 3-Year Advanced Warranty</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-mono text-2xl lg:text-3xl font-bold text-brand-gold tracking-tight" id="main-system-total">$1,581</span>
+<span class="font-mono text-xs text-text-muted">USD</span>
+</div>
+</div>
+<!-- Lease alternative banner -->
+<div class="mt-2 p-2.5 rounded-lg bg-surface-container-high/60 border border-brand-gold/20 flex items-center gap-2 text-[11px]">
+<span class="material-symbols-outlined text-brand-gold text-[16px] flex-shrink-0">payments</span>
+<span class="text-text-muted">or <strong class="text-text-primary font-medium">4COVR Enterprise Lease</strong> from <strong class="text-brand-gold font-mono">$51/mo</strong> with SLA on-site warranty.</span>
+</div>
+</div>
+<!-- Primary CTAs & Interactive Buttons -->
+<div class="flex flex-col gap-2.5 pt-1">
+<button class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-gold to-[#d98b16] hover:brightness-110 text-surface-stage font-sans font-semibold text-base shadow-[0_0_24px_rgba(245,166,35,0.4)] flex items-center justify-center gap-2 transition-all cursor-pointer" id="btn-generate-quote-modal" type="button">
+<span class="material-symbols-outlined text-[20px]">request_quote</span>
+<span>Generate My Quote</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high border border-border-hairline text-text-primary text-[12px] font-medium flex items-center justify-center gap-1.5 transition-colors" id="btn-save-config-side" type="button">
+<span class="material-symbols-outlined text-[15px] text-brand-gold">bookmark_add</span>
+<span>Save Configuration</span>
+</button>
+<button class="py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high border border-border-hairline text-text-primary text-[12px] font-medium flex items-center justify-center gap-1.5 transition-colors" id="btn-export-csv-side" type="button">
+<span class="material-symbols-outlined text-[15px] text-text-muted">download</span>
+<span>Export BOM (CSV)</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-2 text-[11px] font-mono text-text-muted">
+<a class="hover:text-text-primary flex items-center gap-1 transition-colors" href="#">
+<span class="material-symbols-outlined text-[13px]">arrow_back</span>
+<span>Back to PoE Setup</span>
+</a>
+<button class="hover:text-red-400 transition-colors" id="btn-reset-config" type="button">
+                  Start Over
+                </button>
+</div>
+</div>
+</div>
+<!-- Trust Badges & Guarantee Panel -->
+<div class="p-4 rounded-xl bg-surface-panel border border-border-hairline flex flex-col gap-2.5">
+<span class="font-mono text-[10px] uppercase tracking-wider text-text-muted">4COVR Enterprise Assurance</span>
+<div class="grid grid-cols-2 gap-2 text-[11px] text-text-muted">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-brand-gold text-[15px]">verified_user</span>
+<span>3-Year Advance SLA</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-brand-gold text-[15px]">local_shipping</span>
+<span>Free Expedited Dispatch</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-brand-gold text-[15px]">support</span>
+<span>Pre-Deployment Staging</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-brand-gold text-[15px]">security</span>
+<span>NDAA Compliant Silicon</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BOTTOM FLOATING ACTION BAR -->
+<footer class="fixed bottom-0 inset-x-0 z-40 bg-[#141619]/90 backdrop-blur-2xl border-t border-border-hairline shadow-[0_-4px_28px_rgba(0,0,0,0.7)]">
+<div class="h-18 py-3 w-full px-6 lg:px-12 flex items-center justify-between gap-4">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-mono text-[11px] text-text-muted uppercase">Configuration Total:</span>
+<span class="font-mono text-xl font-bold text-brand-gold" id="footer-total-display">$1,581</span>
+<span class="text-xs text-text-muted font-mono">USD</span>
+</div>
+<span class="text-[11px] text-text-muted">8 Intelligent Sensors + 8CH Core + PoE Network + Accessories</span>
+</div>
+<div class="h-8 w-px bg-border-hairline hidden md:block"></div>
+<div class="hidden lg:flex items-center gap-2 text-[12px] text-text-muted font-mono">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>100% In-Stock &amp; Ready for Provisioning</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high border border-border-hairline text-text-primary text-[13px] font-medium transition-colors hidden sm:flex items-center gap-1.5" id="btn-save-draft-footer" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+<span>Save Config</span>
+</button>
+<button class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-brand-gold to-[#d98b16] hover:brightness-110 text-surface-stage font-sans font-semibold text-[13px] shadow-[0_0_20px_rgba(245,166,35,0.4)] flex items-center gap-2 transition-all" id="btn-footer-quote" type="button">
+<span class="material-symbols-outlined text-[18px]">request_quote</span>
+<span>Generate My Quote</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- ========================================================================= -->
+<!-- MODAL / OVERLAY 1: ADJUST ACCESSORIES DRAWER -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4" id="drawer-accessories">
+<div class="relative w-full max-w-xl bg-surface-panel border border-border-hairline rounded-2xl shadow-2xl p-6 flex flex-col gap-5 max-h-[90vh] overflow-y-auto">
+<div class="flex items-center justify-between pb-3 border-b border-border-hairline">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-brand-gold">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+<div>
+<h3 class="text-base font-semibold text-text-primary">Adjust Installation Accessories</h3>
+<p class="text-[12px] text-text-muted">Fine-tune cable lengths and exterior protective junction hardware.</p>
+</div>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container text-text-muted hover:text-text-primary transition-colors" id="btn-close-drawer" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Option 1: Cable Length Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-mono text-[11px] uppercase tracking-wider text-text-muted">Ethernet Cat6 Run Length (All 8 Runs)</label>
+<div class="grid grid-cols-3 gap-2">
+<label class="p-3 rounded-xl bg-surface-container-low border border-border-hairline hover:border-brand-gold/60 cursor-pointer flex flex-col items-center gap-1 transition-all">
+<input class="sr-only" name="opt-cable-len" type="radio" value="60ft">
+<span class="text-[13px] font-semibold text-text-primary">60 ft</span>
+<span class="text-[11px] text-text-muted">Compact layout</span>
+<span class="font-mono text-[11px] text-emerald-400 font-medium">Included ($0)</span>
+</label>
+<label class="p-3 rounded-xl bg-surface-container border-2 border-brand-gold cursor-pointer flex flex-col items-center gap-1 transition-all" id="card-cable-100">
+<input checked="" class="sr-only" name="opt-cable-len" type="radio" value="100ft">
+<span class="text-[13px] font-semibold text-text-primary">100 ft</span>
+<span class="text-[11px] text-text-muted">Architectural Standard</span>
+<span class="font-mono text-[11px] text-emerald-400 font-medium">Included ($0)</span>
+</label>
+<label class="p-3 rounded-xl bg-surface-container-low border border-border-hairline hover:border-brand-gold/60 cursor-pointer flex flex-col items-center gap-1 transition-all">
+<input class="sr-only" name="opt-cable-len" type="radio" value="150ft">
+<span class="text-[13px] font-semibold text-text-primary">150 ft</span>
+<span class="text-[11px] text-text-muted">Large compound</span>
+<span class="font-mono text-[11px] text-brand-gold font-medium">+$40</span>
+</label>
+</div>
+</div>
+<!-- Option 2: Junction Box Quantity -->
+<div class="flex flex-col gap-2 pt-2 border-t border-border-hairline">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-mono text-[11px] uppercase tracking-wider text-text-muted">Outdoor Junction Boxes (LY-DP54)</span>
+<p class="text-[12px] text-text-muted">Provisioned for exposed perimeter surface mounts ($19/unit).</p>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest border border-border-hairline rounded-lg p-1">
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-text-primary font-mono text-base" id="btn-jbox-minus" type="button">-</button>
+<span class="w-8 text-center font-mono text-sm font-semibold text-brand-gold" id="drawer-jbox-qty">4</span>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-text-primary font-mono text-base" id="btn-jbox-plus" type="button">+</button>
+</div>
+</div>
+</div>
+<!-- Option 3: Optional Conduit Adapters -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low border border-border-hairline">
+<div class="flex flex-col">
+<span class="text-[13px] font-medium text-text-primary">3/4" EMT Conduit Adapters (Pack of 4)</span>
+<span class="text-[11px] text-text-muted">For industrial surface conduit pipe threading.</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-mono text-[12px] text-text-muted">+$24</span>
+<input class="w-4 h-4 rounded bg-surface-container border-border-hairline text-brand-gold focus:ring-0 cursor-pointer" id="toggle-conduit" type="checkbox">
+</div>
+</div>
+<!-- Footer Buttons -->
+<div class="flex items-center justify-end gap-3 pt-3 border-t border-border-hairline">
+<button class="px-4 py-2 rounded-xl text-text-muted hover:text-text-primary text-[13px]" id="btn-cancel-drawer" type="button">
+          Cancel
+        </button>
+<button class="px-5 py-2 rounded-xl bg-brand-gold text-surface-stage font-semibold text-[13px] shadow-lg hover:brightness-110 transition-all" id="btn-apply-drawer" type="button">
+          Apply &amp; Recalculate
+        </button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL 2: SLEEK OFFICIAL QUOTE SHEET MODAL -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4" id="modal-quote">
+<div class="relative w-full max-w-2xl bg-[#141619] border border-border-hairline rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col gap-6 max-h-[92vh] overflow-y-auto">
+<!-- Top Quote Header -->
+<div class="flex items-start justify-between pb-4 border-b border-border-hairline">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high border border-brand-gold/40 flex items-center justify-center">
+<span class="font-mono text-base font-bold text-brand-gold">4C</span>
+</div>
+<div class="flex flex-col">
+<span class="font-sans font-semibold text-text-primary text-base tracking-wide">4COVR ARCHITECTURAL QUOTE</span>
+<span class="font-mono text-[11px] text-brand-gold">QUOTE REF: #4C-2025-Q892</span>
+</div>
+</div>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-text-muted hover:text-text-primary transition-colors" id="btn-close-quote" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Metadata Strip -->
+<div class="grid grid-cols-3 gap-3 p-3.5 rounded-xl bg-surface-container-lowest border border-border-hairline text-[11px] font-mono">
+<div>
+<span class="text-text-muted uppercase">Issue Date</span>
+<p class="text-text-primary font-medium mt-0.5" id="quote-date-display">Today</p>
+</div>
+<div>
+<span class="text-text-muted uppercase">Valid Through</span>
+<p class="text-text-primary font-medium mt-0.5">30 Calendar Days</p>
+</div>
+<div>
+<span class="text-text-muted uppercase">Configuration</span>
+<p class="text-brand-gold font-medium mt-0.5">8CH Studio System</p>
+</div>
+</div>
+<!-- Itemized Table In Modal -->
+<div class="flex flex-col gap-1.5 text-[12px]">
+<div class="flex items-center justify-between pb-1 text-text-muted font-mono text-[10px] uppercase border-b border-border-hairline">
+<span>Component Scope</span>
+<span>Amount</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-border-hairline/40">
+<span class="text-text-primary">8× AI Cameras (4× Armor Bullet, 2× BinSight Turret, 2× DualArc 180°)</span>
+<span class="font-mono text-text-primary">$1,112.00</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-border-hairline/40">
+<span class="text-text-primary">8-Channel Quantum Core NVR + 4TB Enterprise Pro CMR HDD</span>
+<span class="font-mono text-text-primary">$304.00</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-border-hairline/40">
+<span class="text-text-primary">8-Port Enterprise 120W PoE Switch (&lt;1ms Wire-Speed)</span>
+<span class="font-mono text-text-primary">$89.00</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-border-hairline/40">
+<span class="text-text-primary" id="quote-modal-acc-line">Installation Accessories (8× Cat6 Cables, 4× IP66 Junction Boxes, Hardware)</span>
+<span class="font-mono text-text-primary" id="quote-modal-acc-price">$76.00</span>
+</div>
+<div class="flex items-center justify-between py-1.5 border-b border-border-hairline/40">
+<span class="text-emerald-400">4COVR Express Ground Shipping &amp; System Staging</span>
+<span class="font-mono text-emerald-400">Complimentary ($0)</span>
+</div>
+</div>
+<!-- Grand Total In Modal -->
+<div class="p-4 rounded-xl bg-surface-container-high/60 border border-brand-gold/30 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-text-primary">Official Total Quotation</span>
+<span class="text-[11px] text-text-muted">Hardware price locked with 3-Year Advanced Replacement</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-mono text-2xl font-bold text-brand-gold" id="quote-modal-total">$1,581.00</span>
+<span class="font-mono text-xs text-text-muted">USD</span>
+</div>
+</div>
+<!-- Quote Modal Actions -->
+<div class="flex items-center justify-between gap-3 pt-2">
+<button class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-highest border border-border-hairline text-text-primary text-[13px] flex items-center gap-1.5 transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Print / Save as PDF</span>
+</button>
+<button class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-gold to-[#d98b16] hover:brightness-110 text-surface-stage font-semibold text-[13px] shadow-lg flex items-center gap-1.5 transition-all" id="btn-quote-confirm-advisor" type="button">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Email Quote to Engineering</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- TOAST NOTIFICATION CONTAINER -->
+<!-- ========================================================================= -->
+<div class="fixed bottom-24 right-6 z-50 pointer-events-none flex flex-col gap-2 transition-all" id="toast-container"></div>
+<!-- SCRIPT LOGIC: INTERACTIVE HOOKS -->
+<script>
+    (function() {
+      // Current State Values
+      let state = {
+        jboxCount: 4,
+        jboxUnitPrice: 19,
+        conduitEnabled: false,
+        conduitPrice: 24,
+        cableLen: '100ft',
+        cableSurcharge: 0,
+        baseHardwareExAcc: 1112 + 304 + 89 // 1505
+      };
+
+      // Set Issue Date
+      const dateElem = document.getElementById('quote-date-display');
+      if (dateElem) {
+        const now = new Date();
+        dateElem.textContent = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      }
+
+      // View Perspective Image Switcher
+      const tabComplete = document.getElementById('tab-view-complete');
+      const tabCameras = document.getElementById('tab-view-cameras');
+      const tabNetwork = document.getElementById('tab-view-network');
+      const heroImg = document.getElementById('hero-display-img');
+      const hotTagEco = document.getElementById('hottag-eco');
+      const hotTagNvr = document.getElementById('hottag-nvr');
+      const hotTagSensors = document.getElementById('hottag-sensors');
+
+      const imgEcoSrc = 'https://lh3.googleusercontent.com/aida-public/AB6AXuDkN9DyCIf-q7-BHM9k-Q9l80mlCXadUARrDOEm_XiH4jOfZvrunePqv1VKIYHBcDq3r_QKZtdpOnJuI6VkrV0jDKAdniToRlCl3m0fDGba9U4QTlx9EKe3CRz8L7po3URpFsfkkTSii71l4CgMwDSui25LOQpJ_fxq1HYc4VgL9mVvKvF4dbh4wZZhWcG3zFKLJSVTJPtocDXqtNv3IA9cfV49dA0yT-D_NQdvOdb0EqPMHUC1ss9Rrw';
+      const imgCamSrc = 'https://lh3.googleusercontent.com/aida/AEtjO1V5Qf1NqHsiO8zVjxDwKNQO9Dpprt4ElR5V5Qi812Liyd760TLb8f47DzVingfSw9dMiK1TbSehGFp0jsdMYerAe58I2LqVXdALhvBUuguZvYWs4GVrjxnPxDrhrhWq-ocSR1ZIWw2rOeAAbZQNgnAX_b2378_W4qsNhzsQAIFGAUuZwMAp2TumUFnIkwIEmcr7CqNliknkItTw_GB-lwgJnnPq8LiMtnoLEbwghLjhKAM3UOx8sd74fGLL';
+      const imgNetSrc = 'https://lh3.googleusercontent.com/aida/AEtjO1XyBZ9I6BI0YGyk64jDBVhhOC4xNFO05kovzuUikvo6Jit-PNRdfDZ9aOcNtWClrI6aEySxjQ9iiz6GmMtsxiBu1q-mXH2wMwwkKvk5CwoYk4acKCWIgYiLE8nS4taA4CvXLzb1XYXXaEV_4fFAzneG8k8ASrQdqP7pTWa0kAqrUMMsTsdmReG1TA-czXnOcBhhCBTxmQYEOi7H08s4cpWbiCh5CoJrVKzXVL29QFke3GYETHszHQx4nX-s';
+
+      function resetTabs() {
+        [tabComplete, tabCameras, tabNetwork].forEach(tab => {
+          tab.className = 'px-3 py-1 text-[12px] rounded font-medium transition-all text-text-muted hover:text-text-primary flex items-center gap-1.5';
+        });
+      }
+
+      if (tabComplete && tabCameras && tabNetwork && heroImg) {
+        tabComplete.addEventListener('click', () => {
+          resetTabs();
+          tabComplete.className = 'px-3 py-1 text-[12px] rounded font-medium transition-all bg-surface-container-high text-brand-gold shadow-sm flex items-center gap-1.5';
+          heroImg.src = imgEcoSrc;
+          if (hotTagEco) hotTagEco.classList.remove('hidden');
+          if (hotTagNvr) hotTagNvr.classList.remove('hidden');
+          if (hotTagSensors) hotTagSensors.classList.remove('hidden');
+        });
+
+        tabCameras.addEventListener('click', () => {
+          resetTabs();
+          tabCameras.className = 'px-3 py-1 text-[12px] rounded font-medium transition-all bg-surface-container-high text-brand-gold shadow-sm flex items-center gap-1.5';
+          heroImg.src = imgCamSrc;
+          if (hotTagEco) hotTagEco.classList.add('hidden');
+          if (hotTagNvr) hotTagNvr.classList.add('hidden');
+          if (hotTagSensors) hotTagSensors.classList.remove('hidden');
+        });
+
+        tabNetwork.addEventListener('click', () => {
+          resetTabs();
+          tabNetwork.className = 'px-3 py-1 text-[12px] rounded font-medium transition-all bg-surface-container-high text-brand-gold shadow-sm flex items-center gap-1.5';
+          heroImg.src = imgNetSrc;
+          if (hotTagEco) hotTagEco.classList.add('hidden');
+          if (hotTagSensors) hotTagSensors.classList.add('hidden');
+          if (hotTagNvr) hotTagNvr.classList.remove('hidden');
+        });
+      }
+
+      // BOM Table Accordion
+      const btnToggleBom = document.getElementById('btn-toggle-bom-table');
+      const bomContent = document.getElementById('bom-table-content');
+      const iconBomArrow = document.getElementById('icon-bom-arrow');
+
+      if (btnToggleBom && bomContent) {
+        btnToggleBom.addEventListener('click', () => {
+          const isHidden = bomContent.classList.contains('hidden');
+          if (isHidden) {
+            bomContent.classList.remove('hidden');
+            if (iconBomArrow) iconBomArrow.style.transform = 'rotate(180deg)';
+          } else {
+            bomContent.classList.add('hidden');
+            if (iconBomArrow) iconBomArrow.style.transform = 'rotate(0deg)';
+          }
+        });
+      }
+
+      // Accessories Details Accordion
+      const btnAccList = document.getElementById('btn-toggle-accessories-list');
+      const accExpanded = document.getElementById('accessories-expanded-panel');
+      const iconAccChev = document.getElementById('icon-acc-chevron');
+      const labelAccView = document.getElementById('label-acc-view');
+
+      if (btnAccList && accExpanded) {
+        btnAccList.addEventListener('click', () => {
+          const isHidden = accExpanded.classList.contains('hidden');
+          if (isHidden) {
+            accExpanded.classList.remove('hidden');
+            if (iconAccChev) iconAccChev.style.transform = 'rotate(180deg)';
+            if (labelAccView) labelAccView.textContent = 'Hide Details';
+          } else {
+            accExpanded.classList.add('hidden');
+            if (iconAccChev) iconAccChev.style.transform = 'rotate(0deg)';
+            if (labelAccView) labelAccView.textContent = 'View Details & Specs';
+          }
+        });
+      }
+
+      // Toast notification utility
+      function showToast(message, icon = 'check_circle') {
+        const container = document.getElementById('toast-container');
+        if (!container) return;
+
+        const toast = document.createElement('div');
+        toast.className = 'pointer-events-auto px-4 py-2.5 rounded-xl bg-surface-panel border border-brand-gold/40 shadow-2xl flex items-center gap-2.5 text-text-primary text-[13px] transform transition-all duration-300 translate-y-2 opacity-0';
+        toast.innerHTML = `<span class="material-symbols-outlined text-brand-gold text-[18px]">${icon}</span><span>${message}</span>`;
+        container.appendChild(toast);
+
+        requestAnimationFrame(() => {
+          toast.classList.remove('translate-y-2', 'opacity-0');
+        });
+
+        setTimeout(() => {
+          toast.classList.add('opacity-0', 'translate-y-2');
+          setTimeout(() => toast.remove(), 350);
+        }, 3200);
+      }
+
+      // Adjust Accessories Drawer Controls
+      const drawer = document.getElementById('drawer-accessories');
+      const btnOpenDrawer = document.getElementById('btn-open-adjust-drawer');
+      const btnCloseDrawer = document.getElementById('btn-close-drawer');
+      const btnCancelDrawer = document.getElementById('btn-cancel-drawer');
+      const btnApplyDrawer = document.getElementById('btn-apply-drawer');
+      const drawerJboxQty = document.getElementById('drawer-jbox-qty');
+      const btnJboxMinus = document.getElementById('btn-jbox-minus');
+      const btnJboxPlus = document.getElementById('btn-jbox-plus');
+      const toggleConduit = document.getElementById('toggle-conduit');
+
+      let tempJbox = state.jboxCount;
+
+      if (btnOpenDrawer && drawer) {
+        btnOpenDrawer.addEventListener('click', () => {
+          tempJbox = state.jboxCount;
+          if (drawerJboxQty) drawerJboxQty.textContent = tempJbox;
+          drawer.classList.remove('hidden');
+          drawer.classList.add('flex');
+        });
+      }
+
+      function hideDrawer() {
+        if (drawer) {
+          drawer.classList.add('hidden');
+          drawer.classList.remove('flex');
+        }
+      }
+
+      if (btnCloseDrawer) btnCloseDrawer.addEventListener('click', hideDrawer);
+      if (btnCancelDrawer) btnCancelDrawer.addEventListener('click', hideDrawer);
+
+      if (btnJboxMinus) {
+        btnJboxMinus.addEventListener('click', () => {
+          if (tempJbox > 0) {
+            tempJbox--;
+            if (drawerJboxQty) drawerJboxQty.textContent = tempJbox;
+          }
+        });
+      }
+
+      if (btnJboxPlus) {
+        btnJboxPlus.addEventListener('click', () => {
+          if (tempJbox < 16) {
+            tempJbox++;
+            if (drawerJboxQty) drawerJboxQty.textContent = tempJbox;
+          }
+        });
+      }
+
+      // Calculate totals
+      function recalculateAll() {
+        const jboxCost = state.jboxCount * state.jboxUnitPrice;
+        const conduitCost = state.conduitEnabled ? state.conduitPrice : 0;
+        const accessoriesTotal = jboxCost + conduitCost + state.cableSurcharge;
+        const grandTotal = state.baseHardwareExAcc + accessoriesTotal;
+
+        // Update DOM elements
+        const jboxSummaryDisplay = document.getElementById('jbox-summary-display');
+        const jboxPriceDisplay = document.getElementById('jbox-price-display');
+        const sideAccSubtotal = document.getElementById('side-acc-subtotal');
+        const mainSystemTotal = document.getElementById('main-system-total');
+        const footerTotalDisplay = document.getElementById('footer-total-display');
+        const bomJboxQty = document.getElementById('bom-jbox-qty');
+        const bomJboxSubtotal = document.getElementById('bom-jbox-subtotal');
+        const bomGrandTotal = document.getElementById('bom-grand-total');
+        const quoteModalAccPrice = document.getElementById('quote-modal-acc-price');
+        const quoteModalTotal = document.getElementById('quote-modal-total');
+        const cableLenDisplay = document.getElementById('cable-len-display');
+
+        if (jboxSummaryDisplay) jboxSummaryDisplay.textContent = `${state.jboxCount}× Waterproof LY-DP54 Deep Box`;
+        if (jboxPriceDisplay) jboxPriceDisplay.textContent = `$${jboxCost}`;
+        if (sideAccSubtotal) sideAccSubtotal.textContent = `$${accessoriesTotal}.00`;
+        if (mainSystemTotal) mainSystemTotal.textContent = `$${grandTotal.toLocaleString()}`;
+        if (footerTotalDisplay) footerTotalDisplay.textContent = `$${grandTotal.toLocaleString()}`;
+
+        if (bomJboxQty) bomJboxQty.textContent = state.jboxCount;
+        if (bomJboxSubtotal) bomJboxSubtotal.textContent = `$${jboxCost}.00`;
+        if (bomGrandTotal) bomGrandTotal.textContent = `$${grandTotal.toLocaleString()}.00`;
+
+        if (quoteModalAccPrice) quoteModalAccPrice.textContent = `$${accessoriesTotal}.00`;
+        if (quoteModalTotal) quoteModalTotal.textContent = `$${grandTotal.toLocaleString()}.00`;
+
+        if (cableLenDisplay) {
+          cableLenDisplay.textContent = `8× ${state.cableLen} Weatherproof Black`;
+        }
+      }
+
+      if (btnApplyDrawer) {
+        btnApplyDrawer.addEventListener('click', () => {
+          state.jboxCount = tempJbox;
+          state.conduitEnabled = toggleConduit ? toggleConduit.checked : false;
+
+          // Check selected cable length radio
+          const cableRadios = document.querySelectorAll('input[name="opt-cable-len"]');
+          cableRadios.forEach(radio => {
+            if (radio.checked) {
+              state.cableLen = radio.value;
+              state.cableSurcharge = radio.value === '150ft' ? 40 : 0;
+            }
+          });
+
+          recalculateAll();
+          hideDrawer();
+          showToast('Accessories & hardware BOM updated');
+        });
+      }
+
+      // Quote Modal triggers
+      const modalQuote = document.getElementById('modal-quote');
+      const btnHeaderQuote = document.getElementById('btn-header-quote');
+      const btnGenerateQuote = document.getElementById('btn-generate-quote-modal');
+      const btnFooterQuote = document.getElementById('btn-footer-quote');
+      const btnCloseQuote = document.getElementById('btn-close-quote');
+      const btnQuoteConfirm = document.getElementById('btn-quote-confirm-advisor');
+
+      function openQuoteModal() {
+        if (modalQuote) {
+          modalQuote.classList.remove('hidden');
+          modalQuote.classList.add('flex');
+        }
+      }
+
+      function closeQuoteModal() {
+        if (modalQuote) {
+          modalQuote.classList.add('hidden');
+          modalQuote.classList.remove('flex');
+        }
+      }
+
+      if (btnHeaderQuote) btnHeaderQuote.addEventListener('click', openQuoteModal);
+      if (btnGenerateQuote) btnGenerateQuote.addEventListener('click', openQuoteModal);
+      if (btnFooterQuote) btnFooterQuote.addEventListener('click', openQuoteModal);
+      if (btnCloseQuote) btnCloseQuote.addEventListener('click', closeQuoteModal);
+
+      if (btnQuoteConfirm) {
+        btnQuoteConfirm.addEventListener('click', () => {
+          closeQuoteModal();
+          showToast('Official quote dispatched to 4COVR engineering team');
+        });
+      }
+
+      // Save Config Button Handlers
+      const saveButtons = [
+        document.getElementById('btn-save-config-top'),
+        document.getElementById('btn-save-config-side'),
+        document.getElementById('btn-save-draft-footer')
+      ];
+
+      saveButtons.forEach(btn => {
+        if (btn) {
+          btn.addEventListener('click', () => {
+            localStorage.setItem('4COVR_SAVED_CONFIG', JSON.stringify({
+              configId: '4C-2025-ARCH8-X9',
+              total: document.getElementById('main-system-total').textContent,
+              timestamp: new Date().toISOString()
+            }));
+            showToast('Configuration #4C-2025-ARCH8-X9 saved to browser storage', 'bookmark');
+          });
+        }
+      });
+
+      // Export CSV Handlers
+      function exportCSV() {
+        const csvContent = "data:text/csv;charset=utf-8," + 
+          "Product,SKU,Quantity,Unit Price,Subtotal\n" +
+          "Armor 8MP Bullet,4C-CAM-B800,4,$89.00,$356.00\n" +
+          "BinSight 8MP Turret,4C-CAM-T800,2,$149.00,$298.00\n" +
+          "DualArc 180 Panoramic,4C-CAM-P180,2,$229.00,$458.00\n" +
+          "8CH Quantum Core NVR,4C-NVR-08PRO,1,$189.00,$189.00\n" +
+          "4TB Surveillance HDD,4C-HDD-4TB-PRO,1,$115.00,$115.00\n" +
+          "8-Port PoE Switch 120W,4C-POE-08M-120,1,$89.00,$89.00\n" +
+          `Braided Cat6 Cables (${state.cableLen}),4C-CAB-RUN,8,Included,$0.00\n` +
+          `Waterproof Junction Box,4C-JBOX-DP54,${state.jboxCount},$19.00,$${state.jboxCount * 19}.00\n` +
+          `Total Hardware Value,,,$1581.00\n`;
+
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "4COVR-System-Quote-BOM.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        showToast('Exported 4COVR Bill of Materials (CSV)');
+      }
+
+      const btnExportCsv = document.getElementById('btn-export-csv');
+      const btnExportCsvSide = document.getElementById('btn-export-csv-side');
+      if (btnExportCsv) btnExportCsv.addEventListener('click', exportCSV);
+      if (btnExportCsvSide) btnExportCsvSide.addEventListener('click', exportCSV);
+
+      // Start Over Prompt
+      const btnReset = document.getElementById('btn-reset-config');
+      if (btnReset) {
+        btnReset.addEventListener('click', () => {
+          if (confirm('Reset custom architecture configuration back to standard template?')) {
+            window.location.reload();
+          }
+        });
+      }
+
+      // Fullscreen view toggle
+      const btnFs = document.getElementById('btn-fullscreen-toggle');
+      if (btnFs && heroImg) {
+        btnFs.addEventListener('click', () => {
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+          } else {
+            heroImg.requestFullscreen().catch(() => {
+              showToast('Fullscreen studio view toggled');
+            });
+          }
+        });
+      }
+
+    })();
+  </script>
+</body></html>
